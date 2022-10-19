@@ -8,13 +8,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data">
-  <meta property="og:description" content="From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data">
+  <meta property="og:description"
+    content="From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data">
+  <meta property="og:site_name"
+    content="From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="From Play to Policy: Conditional Behavior Generation from Uncurated Robot Data">
-  <meta name="twitter:description"
-    content="Conditional real-world robotic policies from uncurated human play data">
+  <meta name="twitter:description" content="Conditional real-world robotic policies from uncurated human play data">
   <meta name="twitter:image" content="./mfiles/arch bet.001.png" />
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
@@ -23,7 +24,9 @@
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
   <div class="jumbotron">
     <div class="container">
       <div class="row mt-5">
@@ -37,12 +40,14 @@
           </a>
         </div>
         <div class="col-2 center">
-          <a style="text-decoration: none" href="">  <!-- add download -->
+          <a style="text-decoration: none" href="">
+            <!-- add download -->
             <h3 style="color: #F5A803">Code</h3>
           </a>
         </div>
         <div class="col-2 center">
-          <a style="text-decoration: none" href="">  <!-- add download -->
+          <a style="text-decoration: none" href="">
+            <!-- add download -->
             <h3 style="color: #F5A803">Data</h3>
           </a>
         </div>
@@ -53,15 +58,23 @@
         <div class="col-12">
           <h2 class="center m-bottom">Abstract</h2>
           <p>
-            While large-scale sequence modeling from offline data has led to impressive performance gains in natural language
-            generation and image generation, directly translating such ideas to robotics has been challenging. One critical reason
-            for this is that uncurated robot demonstration data, i.e. play data, collected from non-expert human demonstrators are
-            often noisy, diverse, and distributionally multi-modal. This makes extracting useful, task-centric behaviors from such
-            data a difficult generative modeling problem. In this work, we present Conditional Behavior Transformers (C-BeT), a
+            While large-scale sequence modeling from offline data has led to impressive performance gains in natural
+            language
+            generation and image generation, directly translating such ideas to robotics has been challenging. One
+            critical reason
+            for this is that uncurated robot demonstration data, i.e. play data, collected from non-expert human
+            demonstrators are
+            often noisy, diverse, and distributionally multi-modal. This makes extracting useful, task-centric behaviors
+            from such
+            data a difficult generative modeling problem. In this work, we present Conditional Behavior Transformers
+            (C-BeT), a
             method that combines the multi-modal generation ability of Behavior Transformer with future-conditioned goal
-            specification. On a suite of simulated benchmark tasks, we find that C-BeT improves upon prior state-of-the-art work in
-            learning from play data by an average of 45.7%. Further, we demonstrate for the first time that useful task-centric
-            behaviors can be learned on a real-world robot purely from play data without any task labels or reward information.
+            specification. On a suite of simulated benchmark tasks, we find that C-BeT improves upon prior
+            state-of-the-art work in
+            learning from play data by an average of 45.7%. Further, we demonstrate for the first time that useful
+            task-centric
+            behaviors can be learned on a real-world robot purely from play data without any task labels or reward
+            information.
           </p>
         </div>
       </div>
@@ -71,11 +84,14 @@
       <div class="row">
         <div class="col-12">
           <h2 class="center mb-3">Method</h2>
-          <p><a style="color: #00A2FF; font-weight: bold;">Conditional Behavior Transformers (C-BeT)</a>, a method for learning
+          <p><a style="color: #00A2FF; font-weight: bold;">Conditional Behavior Transformers (C-BeT)</a>, a method for
+            learning
             conditional behaviors from uncurated play data without any task labels or rewards.</h4>
           <p>
-            The architecture of our method is shown below. During training, we condition on current and future observations using BeT; the future observations are randomly sampled from the same episode.
-            During evaluation, our algorithm can be conditioned by target observations or newly collected demonstrations to generate targeted behavior.
+            The architecture of our method is shown below. During training, we condition on current and future
+            observations using BeT; the future observations are randomly sampled from the same episode.
+            During evaluation, our algorithm can be conditioned by target observations or newly collected demonstrations
+            to generate targeted behavior.
           </p>
         </div>
       </div>
@@ -92,7 +108,8 @@
           <h4 class="center mb-3">(~30x speedup)</h4>
           <p>
             Conditional rollouts of C-BeT on a real-world toy kitchen robotic environment.
-            We condition the model on a target future observation in which the task has been completed, and record a rollout timelapse synchronously from two camera views.
+            We condition the model on a target future observation in which the task has been completed, and record a
+            rollout timelapse synchronously from two camera views.
             In the last row below, we roll out the model with unseen objects added to the environment as perturbation.
           </p>
         </div>
@@ -104,7 +121,8 @@
           <h4> Open microwave and oven doors </h4>
           <div id="indicator0" class="carousel slide mb-3" data-bs-ride="false">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#indicator0" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#indicator0" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#indicator0" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#indicator0" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#indicator0" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -112,21 +130,25 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/cbet-robot-0.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/cbet-robot-0.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/cbet-robot-1.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/cbet-robot-1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/cbet-robot-2.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/cbet-robot-2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/cbet-robot-3.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/cbet-robot-3.mp4" type="video/mp4">
                 </video>
               </div>
@@ -144,7 +166,8 @@
           <h4> Put the pot in the sink </h4>
           <div id="indicator1" class="carousel slide mb-3" data-bs-ride="false">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#indicator1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#indicator1" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#indicator1" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#indicator1" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#indicator1" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -152,21 +175,25 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/pot_0.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/pot_0.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/pot_1.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/pot_1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/pot_2.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/pot_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/pot_3.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/pot_3.mp4" type="video/mp4">
                 </video>
               </div>
@@ -184,7 +211,8 @@
           <h4> Operate the stove knobs </h4>
           <div id="indicator2" class="carousel slide mb-3" data-bs-ride="false">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#indicator2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#indicator2" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#indicator2" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#indicator2" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#indicator2" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -192,21 +220,25 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/knob_0.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/knob_0.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/knob_1.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/knob_1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/knob_2.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/knob_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/knob_3.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/knob_3.mp4" type="video/mp4">
                 </video>
               </div>
@@ -224,7 +256,8 @@
           <h4> Open the oven door </h4>
           <div id="indicator3" class="carousel slide mb-3" data-bs-ride="false">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#indicator3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#indicator3" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#indicator3" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#indicator3" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#indicator3" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -232,21 +265,25 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/oven_0.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/oven_0.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/oven_1.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/oven_1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/oven_2.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/oven_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="carousel-item">
                 <video class="img" style="height: 600" muted autoplay loop>
+                  <source src="./mfiles/env/real-kitchen/oven_3.webm" type="video/webm">
                   <source src="./mfiles/env/real-kitchen/oven_3.mp4" type="video/mp4">
                 </video>
               </div>
@@ -264,7 +301,8 @@
           <h4> Perturbation with unseen objects </h4>
           <div id="indicator4" class="carousel slide mb-3" data-bs-ride="false">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#indicator4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#indicator4" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#indicator4" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#indicator4" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#indicator4" data-bs-slide-to="3" aria-label="Slide 4"></button>
